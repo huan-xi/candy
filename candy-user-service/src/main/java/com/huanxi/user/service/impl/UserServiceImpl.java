@@ -1,11 +1,11 @@
 package com.huanxi.user.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.huanxi.user.service.UserService;
 import org.springframework.stereotype.Component;
+import user.service.UserService;
 
 @Component
-@Service(version = "1.0.0",timeout = 10000)
+@Service
 public class UserServiceImpl implements UserService {
     @Override
     public String getUserInfo() {

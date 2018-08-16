@@ -1,4 +1,4 @@
-package com.huanxi.user.service;
+package user.service;
 
 public interface UserService {
     public String getUserInfo();
