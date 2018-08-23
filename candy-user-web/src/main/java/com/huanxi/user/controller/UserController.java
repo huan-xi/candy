@@ -1,6 +1,7 @@
 package com.huanxi.user.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import user.service.UserService;
@@ -13,5 +14,9 @@ public class UserController {
     @RequestMapping("/getUserInfo")
     public String getUserInfo(){
         return  userService.getUserInfo();
+    }
+    @RequestMapping("getUsers")
+    public String getUsers(){
+        return null;
     }
 }
