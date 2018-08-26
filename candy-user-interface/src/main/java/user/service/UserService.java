@@ -7,9 +7,9 @@ import com.huanxi.pojo.User;
  */
 public interface UserService {
     /**
-     * 注册用户
+     * 通过手机号快速注册
      */
-    public void add(User user);
+    public int fastReg(User user);
     /**
      * 修改
      */
