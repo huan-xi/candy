@@ -6,10 +6,12 @@
 
     <classPathEntry location="C:\Users\huanzi\.m2\repository\mysql\mysql-connector-java\5.1.8\mysql-connector-java-5.1.8.jar"/>
 
-    <context id="context" targetRuntime="MyBatis3Simple">
+    <context id="context" targetRuntime="MyBatis3">
         <commentGenerator>
             <property name="suppressAllComments" value="false"/>
             <property name="suppressDate" value="true"/>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true" />
         </commentGenerator>
 
         <jdbcConnection userId="root" password="125512" driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/candy"/>
@@ -31,7 +33,9 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <table schema="" tableName="user" enableCountByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table schema="" tableName="user"/>
+        <table schema="" tableName="good" />
+        <!--<table schema="" tableName="image" />-->
+        <!--<table schema="" tableName="good_type"/>-->
     </context>
 </generatorConfiguration>

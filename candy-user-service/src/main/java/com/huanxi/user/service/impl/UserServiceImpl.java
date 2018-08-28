@@ -1,15 +1,17 @@
 package com.huanxi.user.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.huanxi.common.message.com.huanxi.common.validate.UserValidater;
+import com.huanxi.common.validate.UserValidater;
 import com.huanxi.dao.UserMapper;
 import com.huanxi.pojo.User;
+import com.huanxi.pojo.UserExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.DigestUtils;
 import user.service.UserService;
 
 import java.util.Date;
+import java.util.List;
 
 @Component
 @Service
@@ -20,7 +22,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public int fastReg(User user) {
         //设置默认信息
-        user.setRegTime(new Date());
+        user.setRegTime(new Date().getTime());
         user.setUsername("用户_t"+new Date().getTime());
         user.setStatus("1");
         //加密码
@@ -29,15 +31,23 @@ public class UserServiceImpl implements UserService {
         //手机号格式验证
         if(!UserValidater.phoneValidate(user.getPhone()))return 1001;
         //检查重复
-        if (userMapper.findUserByPhone(user.getPhone())!=null)
+        UserExample userExample=new UserExample();
+        userExample.createCriteria().andPhoneEqualTo(user.getPhone());
+        long count =userMapper.countByExample(userExample);
+        if (count!=0)
             return 1002;
         userMapper.insert(user);
         return 1;
     }
 
     @Override
-    public void update(User user) {
-        userMapper.updateByPrimaryKey(user);
+    public int update(User user) {
+        //设置不让更新的字段
+        user.setStatus(null);
+        user.setPassword(null);
+        user.setPhone(null);
+        user.setRegTime(null);
+        return userMapper.updateByPrimaryKeySelective(user);
     }
 
     @Override
@@ -52,6 +62,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findUserByPhone(String phone) {
-        return userMapper.findUserByPhone(phone);
+        UserExample userExample=new UserExample();
+        userExample.createCriteria().andPhoneEqualTo(phone);
+        List<User> users=userMapper.selectByExample(userExample);
+        if (users.size()!=1)return null;
+        return users.get(0);
     }
 }

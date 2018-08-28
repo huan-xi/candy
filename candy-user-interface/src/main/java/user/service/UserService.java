@@ -13,7 +13,7 @@ public interface UserService {
     /**
      * 修改
      */
-    public void update(User user);
+    public int update(User user);
     /**
      * 根据ID获取实体
      */
