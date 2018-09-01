@@ -1,6 +1,5 @@
 package com.huanxi.security;
 
-import com.huanxi.security.AuthorityInfo;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.HashSet;

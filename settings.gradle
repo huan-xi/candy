@@ -1,0 +1,3 @@
+include ':candyapptest', ':candy-app-server'
+
+

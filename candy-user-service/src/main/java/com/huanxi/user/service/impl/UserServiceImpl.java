@@ -1,6 +1,7 @@
 package com.huanxi.user.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.huanxi.common.message.ReturnMessage;
 import com.huanxi.common.validate.UserValidater;
 import com.huanxi.dao.UserMapper;
 import com.huanxi.pojo.User;
@@ -20,24 +21,24 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public int fastReg(User user) {
+    public ReturnMessage fastReg(User user) {
         //设置默认信息
         user.setRegTime(new Date().getTime());
         user.setUsername("用户_t"+new Date().getTime());
         user.setStatus("1");
-        //加密码
-        if(!UserValidater.passwdValidate(user.getPassword()))return 1000;
-        user.setPassword(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()));
         //手机号格式验证
-        if(!UserValidater.phoneValidate(user.getPhone()))return 1001;
+        if(!UserValidater.phoneValidate(user.getPhone()))return new ReturnMessage(1001,"手机号格式错误");
+        //加密码
+        if(!UserValidater.passwdValidate(user.getPassword()))return new ReturnMessage(1000,"密码格式错误");
+        user.setPassword(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()));
         //检查重复
         UserExample userExample=new UserExample();
         userExample.createCriteria().andPhoneEqualTo(user.getPhone());
         long count =userMapper.countByExample(userExample);
         if (count!=0)
-            return 1002;
+            new ReturnMessage(1002,"手机号已存在");
         userMapper.insert(user);
-        return 1;
+        return new ReturnMessage(1,"注册成功");
     }
 
     @Override

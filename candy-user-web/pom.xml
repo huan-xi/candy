@@ -60,10 +60,19 @@
             <optional>true</optional>
         </dependency>
         <!--安全包-->
+        <!-- security 对CAS支持 -->
         <dependency>
-            <groupId>com.huanxi</groupId>
-            <artifactId>candy-security</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-cas</artifactId>
+        </dependency>
+        <!-- security taglibs -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
             <groupId>com.google.code.kaptcha</groupId>

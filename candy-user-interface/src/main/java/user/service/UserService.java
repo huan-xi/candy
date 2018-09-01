@@ -1,5 +1,6 @@
 package user.service;
 
+import com.huanxi.common.message.ReturnMessage;
 import com.huanxi.pojo.User;
 
 /**
@@ -9,7 +10,7 @@ public interface UserService {
     /**
      * 通过手机号快速注册
      */
-    public int fastReg(User user);
+    public ReturnMessage fastReg(User user);
     /**
      * 修改
      */

@@ -224,63 +224,63 @@ public class GoodExample {
             return (Criteria) this;
         }
 
-        public Criteria andTypeIdIsNull() {
-            addCriterion("type_id is null");
+        public Criteria andGoodTypeIdIsNull() {
+            addCriterion("good_type_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIdIsNotNull() {
-            addCriterion("type_id is not null");
+        public Criteria andGoodTypeIdIsNotNull() {
+            addCriterion("good_type_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIdEqualTo(Integer value) {
-            addCriterion("type_id =", value, "typeId");
+        public Criteria andGoodTypeIdEqualTo(Integer value) {
+            addCriterion("good_type_id =", value, "goodTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIdNotEqualTo(Integer value) {
-            addCriterion("type_id <>", value, "typeId");
+        public Criteria andGoodTypeIdNotEqualTo(Integer value) {
+            addCriterion("good_type_id <>", value, "goodTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIdGreaterThan(Integer value) {
-            addCriterion("type_id >", value, "typeId");
+        public Criteria andGoodTypeIdGreaterThan(Integer value) {
+            addCriterion("good_type_id >", value, "goodTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("type_id >=", value, "typeId");
+        public Criteria andGoodTypeIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("good_type_id >=", value, "goodTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIdLessThan(Integer value) {
-            addCriterion("type_id <", value, "typeId");
+        public Criteria andGoodTypeIdLessThan(Integer value) {
+            addCriterion("good_type_id <", value, "goodTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIdLessThanOrEqualTo(Integer value) {
-            addCriterion("type_id <=", value, "typeId");
+        public Criteria andGoodTypeIdLessThanOrEqualTo(Integer value) {
+            addCriterion("good_type_id <=", value, "goodTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIdIn(List<Integer> values) {
-            addCriterion("type_id in", values, "typeId");
+        public Criteria andGoodTypeIdIn(List<Integer> values) {
+            addCriterion("good_type_id in", values, "goodTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIdNotIn(List<Integer> values) {
-            addCriterion("type_id not in", values, "typeId");
+        public Criteria andGoodTypeIdNotIn(List<Integer> values) {
+            addCriterion("good_type_id not in", values, "goodTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIdBetween(Integer value1, Integer value2) {
-            addCriterion("type_id between", value1, value2, "typeId");
+        public Criteria andGoodTypeIdBetween(Integer value1, Integer value2) {
+            addCriterion("good_type_id between", value1, value2, "goodTypeId");
             return (Criteria) this;
         }
 
-        public Criteria andTypeIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("type_id not between", value1, value2, "typeId");
+        public Criteria andGoodTypeIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("good_type_id not between", value1, value2, "goodTypeId");
             return (Criteria) this;
         }
 
@@ -791,6 +791,76 @@ public class GoodExample {
 
         public Criteria andRemarkNotBetween(String value1, String value2) {
             addCriterion("remark not between", value1, value2, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcIsNull() {
+            addCriterion("img_src is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcIsNotNull() {
+            addCriterion("img_src is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcEqualTo(String value) {
+            addCriterion("img_src =", value, "imgSrc");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcNotEqualTo(String value) {
+            addCriterion("img_src <>", value, "imgSrc");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcGreaterThan(String value) {
+            addCriterion("img_src >", value, "imgSrc");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcGreaterThanOrEqualTo(String value) {
+            addCriterion("img_src >=", value, "imgSrc");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcLessThan(String value) {
+            addCriterion("img_src <", value, "imgSrc");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcLessThanOrEqualTo(String value) {
+            addCriterion("img_src <=", value, "imgSrc");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcLike(String value) {
+            addCriterion("img_src like", value, "imgSrc");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcNotLike(String value) {
+            addCriterion("img_src not like", value, "imgSrc");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcIn(List<String> values) {
+            addCriterion("img_src in", values, "imgSrc");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcNotIn(List<String> values) {
+            addCriterion("img_src not in", values, "imgSrc");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcBetween(String value1, String value2) {
+            addCriterion("img_src between", value1, value2, "imgSrc");
+            return (Criteria) this;
+        }
+
+        public Criteria andImgSrcNotBetween(String value1, String value2) {
+            addCriterion("img_src not between", value1, value2, "imgSrc");
             return (Criteria) this;
         }
     }

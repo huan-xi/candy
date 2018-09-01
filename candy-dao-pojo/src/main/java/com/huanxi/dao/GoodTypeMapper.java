@@ -10,7 +10,7 @@ public interface GoodTypeMapper {
 
     int deleteByExample(GoodTypeExample example);
 
-    int deleteByPrimaryKey(Integer typeId);
+    int deleteByPrimaryKey(Integer goodTypeId);
 
     int insert(GoodType record);
 
@@ -18,7 +18,7 @@ public interface GoodTypeMapper {
 
     List<GoodType> selectByExample(GoodTypeExample example);
 
-    GoodType selectByPrimaryKey(Integer typeId);
+    GoodType selectByPrimaryKey(Integer goodTypeId);
 
     int updateByExampleSelective(@Param("record") GoodType record, @Param("example") GoodTypeExample example);
 

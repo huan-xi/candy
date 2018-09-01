@@ -3,12 +3,12 @@ package com.huanxi.pojo;
 import java.io.Serializable;
 
 public class Good implements Serializable {
-    private static final long serialVersionUID = -2491434848805286067L;
+    private static final long serialVersionUID = 1473853389227303970L;
     private Integer goodId;
 
     private Long userId;
 
-    private Integer typeId;
+    private Integer goodTypeId;
 
     private Integer goodOrderId;
 
@@ -25,6 +25,8 @@ public class Good implements Serializable {
     private Float price;
 
     private String remark;
+
+    private String imgSrc;
 
     private String goodDesc;
 
@@ -44,12 +46,12 @@ public class Good implements Serializable {
         this.userId = userId;
     }
 
-    public Integer getTypeId() {
-        return typeId;
+    public Integer getGoodTypeId() {
+        return goodTypeId;
     }
 
-    public void setTypeId(Integer typeId) {
-        this.typeId = typeId;
+    public void setGoodTypeId(Integer goodTypeId) {
+        this.goodTypeId = goodTypeId;
     }
 
     public Integer getGoodOrderId() {
@@ -114,6 +116,14 @@ public class Good implements Serializable {
 
     public void setRemark(String remark) {
         this.remark = remark == null ? null : remark.trim();
+    }
+
+    public String getImgSrc() {
+        return imgSrc;
+    }
+
+    public void setImgSrc(String imgSrc) {
+        this.imgSrc = imgSrc == null ? null : imgSrc.trim();
     }
 
     public String getGoodDesc() {

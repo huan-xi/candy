@@ -1,8 +1,8 @@
 package com.huanxi.good.service;
 
+import com.huanxi.common.message.ReturnMessage;
 import com.huanxi.common.utils.PageResult;
 import com.huanxi.pojo.Good;
-import com.huanxi.pojo.Image;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public interface GoodService {
      * 获取商品图片
      * @param goodId
      */
-    public List<Image> getGoodImg(Integer goodId);
+    public List<String> getGoodImg(Integer goodId);
     /**
      * 新增商品
      *
@@ -24,5 +24,24 @@ public interface GoodService {
      * @param user_id
      * @return
      */
-    public int addGood(Good good, String imgSrc[], Long user_id);
+    public ReturnMessage addGood(Good good, String imgSrc[], Long user_id);
+
+    /**
+     * 获取商品的评论
+     * @param goodId
+     */
+    public void getGoodCommon(Integer goodId);
+    /**
+     * 评论商品
+     * @param goodId
+     * @param common
+     * @return
+     */
+    public int CommonGood(Integer goodId,String common);
+
+    /**
+     * 添加商品分类
+     * @return
+     */
+    public int addType(String s);
 }

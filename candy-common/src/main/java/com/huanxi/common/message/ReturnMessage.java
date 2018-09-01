@@ -29,6 +29,10 @@ public class ReturnMessage implements Serializable {
     public ReturnMessage(int status, String msg) {
         this.status = status;
         this.msg = msg;
+    }
 
+    @Override
+    public String toString() {
+        return "status"+Integer.toString(status)+"msg"+msg;
     }
 }

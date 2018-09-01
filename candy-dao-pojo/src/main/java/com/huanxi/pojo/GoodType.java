@@ -1,19 +1,18 @@
 package com.huanxi.pojo;
 
-import java.io.Serializable;
-
-public class GoodType implements Serializable {
-    private static final long serialVersionUID = 7404872971849535269L;
-    private Integer typeId;
+public class GoodType {
+    private Integer goodTypeId;
 
     private String title;
 
-    public Integer getTypeId() {
-        return typeId;
+    private Integer parentId;
+
+    public Integer getGoodTypeId() {
+        return goodTypeId;
     }
 
-    public void setTypeId(Integer typeId) {
-        this.typeId = typeId;
+    public void setGoodTypeId(Integer goodTypeId) {
+        this.goodTypeId = goodTypeId;
     }
 
     public String getTitle() {
@@ -22,5 +21,13 @@ public class GoodType implements Serializable {
 
     public void setTitle(String title) {
         this.title = title == null ? null : title.trim();
+    }
+
+    public Integer getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
     }
 }

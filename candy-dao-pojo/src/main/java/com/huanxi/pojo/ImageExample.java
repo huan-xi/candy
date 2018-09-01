@@ -1,9 +1,10 @@
 package com.huanxi.pojo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ImageExample {
+public class ImageExample  {
     protected String orderByClause;
 
     protected boolean distinct;

@@ -23,7 +23,7 @@ public class UserValidater {
      * @return
      */
     public static boolean phoneValidate(String phone){
-        if (phone.matches("^1\\d{10}$"))
+        if (phone!=null&&phone.matches("^1\\d{10}$"))
             return true;
         return false;
     }
