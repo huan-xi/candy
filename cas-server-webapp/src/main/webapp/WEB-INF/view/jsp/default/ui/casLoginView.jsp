@@ -1,0 +1,1 @@
+<%@taglib prefix="huanxi" uri="/WEB-INF/mytags.tld" %>{"status":"login","lt":"${loginTicket}","execution":"${flowExecutionKey}","_eventId":"submit","msg":"<%@taglib prefix="huanxi" uri="/WEB-INF/mytags.tld"%>"}
