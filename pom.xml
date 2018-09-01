@@ -9,6 +9,15 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
+        <module>candy-common</module>
+        <module>candy-dao-pojo</module>
+        <module>candy-oss-upload</module>
+        <module>candy-good-interface</module>
+        <module>candy-user-interface</module>
+        <module>candy-user-service</module>
+        <module>candy-user-web</module>
+        <module>candy-good-service</module>
+        <module>candy-good-web</module>
     </modules>
     <dependencies>
 
