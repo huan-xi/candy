@@ -118,7 +118,7 @@ public class AliOSSUtil {
             } else {
                 return null;
             }
-        } catch (OSSException | ClientException oe) {
+        } catch (Exception oe) {
             logger.error("OSS上传失败:", oe);
             oe.printStackTrace();
             return null;
