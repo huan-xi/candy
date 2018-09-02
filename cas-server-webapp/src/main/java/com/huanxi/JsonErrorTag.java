@@ -20,9 +20,10 @@ import java.io.IOException;
  */
 public class JsonErrorTag extends ErrorsTag {
 
+    private static final long serialVersionUID = -5309285189827209297L;
     /*    private String lt;
-        private String execution;
-        private String _eventId;*/
+            private String execution;
+            private String _eventId;*/
     private String error;
 
     /* 标签初始方法 */

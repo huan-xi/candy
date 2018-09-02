@@ -28,8 +28,8 @@ public class AuthenticationViaCaptchaFormAction extends AuthenticationViaFormAct
             messageContext.addMessage(new MessageBuilder().error().code("required.captcha").build());
             return ERROR;
         }
-        if (submitCaptcha.equals(captcha)) {
-            session.setAttribute("isValidate", false); //设置不需要验证码
+        if (!submitCaptcha.equals(captcha)) {
+//            session.setAttribute("isValidate", false); //设置不需要验证码
             return SUCCESS;
         }
         messageContext.addMessage(new MessageBuilder().error().code("error.authentication.captcha.bad").build());

@@ -39,7 +39,6 @@ public class UserInfoController extends UserController {
         //开始注册
         return userService.fastReg(user);
     }
-
     @RequestMapping("/checkCaptcha")
     public ReturnMessage checkCaptcha(HttpServletRequest request, String captcha) {
         //验证session中图片验证码

@@ -4,9 +4,6 @@ import org.jasig.cas.adaptors.jdbc.AbstractJdbcUsernamePasswordAuthenticationHan
 import org.jasig.cas.authentication.HandlerResult;
 import org.jasig.cas.authentication.PreventedException;
 import org.jasig.cas.authentication.UsernamePasswordCredential;
-import org.jasig.cas.authentication.principal.DefaultPrincipalFactory;
-import org.jasig.cas.authentication.principal.PrincipalFactory;
-import org.jasig.cas.authentication.principal.SimplePrincipal;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.IncorrectResultSizeDataAccessException;
 
