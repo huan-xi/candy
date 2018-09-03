@@ -1,12 +1,11 @@
 <jsp:directive.include file="includes/top.jsp" />
 <%@taglib prefix="huanxi" uri="/WEB-INF/mytags.tld" %>
-<div id="cookiesDisabled" class="errors" style="display:none;">
-    <h2><spring:message code="screen.cookies.disabled.title" /></h2>
-    <p><spring:message code="screen.cookies.disabled.message" /></p>
+<div>
+    {"status":"login","execution":"${flowExecutionKey}","lt":"${loginTicket}","_eventId":"submit"<c:if test="${pageContext.request.method eq 'POST'}">,"msg":"<huanxi:jsonError/></c:if>"}
 </div>
 <div class="box" id="login">
     <form:form method="post" id="fm1" commandName="${commandName}" htmlEscape="true">
-        <huanxi:jsonError error= "fds" />
+        <huanxi:jsonError/>
 
         <h2><spring:message code="screen.welcome.instructions" /></h2>
         <section class="row">

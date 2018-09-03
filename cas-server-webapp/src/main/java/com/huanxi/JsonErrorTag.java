@@ -1,5 +1,7 @@
 package com.huanxi;
 
+import org.apache.http.HttpRequest;
+import org.apache.http.impl.bootstrap.HttpServer;
 import org.apache.shiro.session.mgt.SessionContext;
 import org.springframework.binding.message.Message;
 import org.springframework.binding.message.MessageContext;
@@ -9,6 +11,8 @@ import org.springframework.web.servlet.tags.form.ErrorsTag;
 import org.springframework.web.servlet.tags.form.TagWriter;
 import org.springframework.webflow.execution.RequestContextHolder;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspTagException;
 import javax.servlet.jsp.JspWriter;
@@ -43,7 +47,7 @@ public class JsonErrorTag extends ErrorsTag {
             }
         } else {
             try {
-                out.print("登入成功");
+                out.print("验证信息失败");
             } catch (IOException e) {
                 e.printStackTrace();
             }
